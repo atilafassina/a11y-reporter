@@ -1,0 +1,33 @@
+{
+  "name": "a11y-auditor",
+  "version": "1.0.0",
+  "description": "a11y and semantic auditions per page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atilafassina/a11y-auditor.git"
+  },
+  "keywords": [
+    "a11y",
+    "pa11y",
+    "semantic",
+    "testing",
+    "accessibility"
+  ],
+  "author": "@atilafassina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atilafassina/a11y-auditor/issues"
+  },
+  "homepage": "https://github.com/atilafassina/a11y-auditor#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "isomorphic-fetch": "^2.2.1",
+    "micro": "^9.1.4",
+    "pa11y": "^5.0.3"
+  }
+}
