@@ -2,7 +2,7 @@
   "name": "a11y-auditor",
   "version": "1.0.0",
   "description": "a11y and semantic auditions per page",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "micro"
@@ -11,13 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/atilafassina/a11y-auditor.git"
   },
-  "keywords": [
-    "a11y",
-    "pa11y",
-    "semantic",
-    "testing",
-    "accessibility"
-  ],
+  "keywords": ["a11y", "pa11y", "semantic", "testing", "accessibility"],
   "author": "@atilafassina",
   "license": "ISC",
   "bugs": {
@@ -29,5 +23,19 @@
     "isomorphic-fetch": "^2.2.1",
     "micro": "^9.1.4",
     "pa11y": "^5.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/clean-slate-lint",
+      "pre-rewrite": "./node_modules/.bin/clean-slate-lint"
+    }
+  },
+  "devDependencies": {
+    "clean-slate-lint": "^1.0.6"
+  },
+  "eslintConfig": {
+    "globals": {
+      "fetch": true
+    }
   }
 }
