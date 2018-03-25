@@ -4,7 +4,7 @@
   "description": "a11y and semantic auditions per page",
   "main": "src/index.js",
   "scripts": {
-    "test": "ava",
+    "test": "nyc ava",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "start": "micro"
   },
