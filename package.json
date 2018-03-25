@@ -4,7 +4,8 @@
   "description": "a11y and semantic auditions per page",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava",
+    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "start": "micro"
   },
   "repository": {
@@ -31,7 +32,10 @@
     }
   },
   "devDependencies": {
-    "clean-slate-lint": "^1.0.6"
+    "ava": "^1.0.0-beta.3",
+    "clean-slate-lint": "^1.0.6",
+    "codecov": "^3.0.0",
+    "nyc": "^11.6.0"
   },
   "eslintConfig": {
     "globals": {

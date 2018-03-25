@@ -2,7 +2,7 @@ const pa11y = require('pa11y')
 const { send, json } = require('micro')
 const outline = require('./outline')
 
-const filterIssues = (pa11y, semantics, issueFilter) => {
+const filterIssues = (pa11y = [], semantics = [], issueFilter) => {
   const a11yIssues = Array.isArray(issueFilter)
     ? pa11y.filter(issue => issueFilter.includes(issue.code))
     : pa11y
@@ -31,3 +31,5 @@ module.exports = async (req, res) => {
 
   send(res, 200, report)
 }
+
+module.exports.filterIssues = filterIssues
