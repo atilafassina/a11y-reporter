@@ -34,8 +34,9 @@ it('should return a 400 when test url is not found', async () => {
 })
 
 it('should return a 200 when test url works', async () => {
-  expect.assertions(2)
-  const testUrl = 'https://google.com'
+  expect.assertions(1)
+
+  const testUrl = 'https://example.com'
 
   const service = micro(a11yAuditor)
   const mockServerUrl = await listen(service)
@@ -49,10 +50,6 @@ it('should return a 200 when test url works', async () => {
     })
   })
 
-  const json = await response.json()
-
   expect(response.status).toEqual(200)
-  expect(typeof json === 'object').toBeTruthy()
-
   service.close()
 })

@@ -1,7 +1,5 @@
 const utils = require('./')
-const root = '../../'
-const pa11yReport = require(`${root}/__mocks__/pa11y.js`)()
-const outlineReport = require(`${root}__mocks__/outline.js`)()
+const { pa11yReport, outlineReport } = require('../../mocks/testMocks')
 
 it('`filterIssues` should return empty array when no input is provided', () => {
   const actual = utils._filterIssues()
