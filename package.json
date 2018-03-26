@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "coverage": "jest && codecov",
     "start": "micro"
   },
   "repository": {
