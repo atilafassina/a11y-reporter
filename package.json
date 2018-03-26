@@ -33,14 +33,10 @@
     }
   },
   "devDependencies": {
-    "ava": "^1.0.0-beta.3",
     "clean-slate-lint": "^1.0.6",
     "codecov": "^3.0.0",
     "eslint-plugin-jest": "^21.15.0",
     "jest": "^22.4.3",
-    "nyc": "^11.6.0",
-    "request-promise": "^4.2.2",
-    "sinon": "^4.4.8",
     "test-listen": "^1.1.0"
   },
   "eslintConfig": {
@@ -51,5 +47,9 @@
     "env": {
       "jest/globals": true
     }
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
