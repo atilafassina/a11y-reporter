@@ -4,7 +4,7 @@
   "description": "a11y and semantic auditions per page",
   "main": "src/index.js",
   "scripts": {
-    "test": "nyc ava",
+    "test": "jest",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "start": "micro"
   },
@@ -22,6 +22,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.5",
     "micro": "^9.1.4",
     "pa11y": "^5.0.3"
   },
@@ -35,11 +36,20 @@
     "ava": "^1.0.0-beta.3",
     "clean-slate-lint": "^1.0.6",
     "codecov": "^3.0.0",
-    "nyc": "^11.6.0"
+    "eslint-plugin-jest": "^21.15.0",
+    "jest": "^22.4.3",
+    "nyc": "^11.6.0",
+    "request-promise": "^4.2.2",
+    "sinon": "^4.4.8",
+    "test-listen": "^1.1.0"
   },
   "eslintConfig": {
+    "plugins": ["jest"],
     "globals": {
       "fetch": true
+    },
+    "env": {
+      "jest/globals": true
     }
   }
 }
