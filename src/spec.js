@@ -35,8 +35,8 @@ it('should return a 400 when test url is not found', async () => {
 
 it('should return a 200 when test url works', async () => {
   expect.assertions(1)
-
-  const testUrl = 'https://example.com'
+  global.fetch = () => ({ status: 200 })
+  const testUrl = 'https://foo.bar'
 
   const service = micro(a11yAuditor)
   const mockServerUrl = await listen(service)
