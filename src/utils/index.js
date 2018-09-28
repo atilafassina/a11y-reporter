@@ -12,7 +12,7 @@ const filterIssues = (pa11y = [], semantics = [], issueFilter) => {
 
 const getReport = async ({ url, filterList = [] }) => {
   try {
-    const a11yReport = await pa11y(url, {})
+    const a11yReport = await pa11y(url)
     const semantics = await outline(url, {})
     const reportIssues = filterIssues(a11yReport.issues, semantics, filterList)
 
