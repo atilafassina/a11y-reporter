@@ -25,7 +25,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "micro": "^9.1.4",
     "node-fetch": "^2.1.2",
     "pa11y": "^5.0.3",
