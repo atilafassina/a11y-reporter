@@ -28,7 +28,7 @@
     "lodash": "^4.17.5",
     "micro": "^9.1.4",
     "node-fetch": "^2.1.2",
-    "pa11y": "^5.0.3",
+    "pa11y": "^5.3.1",
     "request-promise": "^4.2.2"
   },
   "husky": {
